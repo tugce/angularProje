@@ -1,5 +1,8 @@
-app.controller('MainController', ['$scope', function($scope) {
+app.controller('MainController', ['$scope', function($scope, $route, $routeParams, $location) {
 	$scope.title = 'Bilgi Kütüphanesi';
+	$scope.$route = $route;
+  $scope.$location = $location;
+  $scope.$routeParams = $routeParams;
 	$scope.bilgi = [
 	    {
 	        isim: '',
