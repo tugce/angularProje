@@ -12,9 +12,12 @@ app.controller('MainController', ['$scope', function($scope, $route, $routeParam
 	];
 	$scope.yeniBilgiNo = 1;
 	$scope.yeniBilgiAd = "";
-	$scope.icerik = "";
+	$scope.yeniIcerik = "";
 	$scope.yeniBilgiEkle = function(){
-			var yeniBilgi = [{isim: $scope.yeniBilgiAd, no: $scope.bilgi.length + 1, icerik: $scope.icerik}];
+			var yeniBilgi = [{
+				isim: $scope.yeniBilgiAd,
+				no: $scope.bilgi.length + 1,
+				icerik: $scope.yeniIcerik}];
 			var currentList = $scope.bilgi;
 			var newList = currentList.concat(yeniBilgi);
 			$scope.bilgi = newList;
