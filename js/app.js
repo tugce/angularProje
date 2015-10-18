@@ -2,7 +2,7 @@ var app = angular.module("angularProje", ['ngRoute'])
 .config(function($routeProvider, $locationProvider) {
   $routeProvider
    .when('/AddBilgi', {
-    templateUrl: '/templates/add-bilgi.html',
+    templateUrl: '/add-bilgi.html',
     controller: 'AddBilgiController'
   })
   .otherwise('/', {

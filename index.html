@@ -15,13 +15,16 @@
     </div><!--jumbotron-->
     <br>
     <div class="container">
-      <a href="/templates/add-bilgi">Bilgi Ekle</a> 
+      <a href="index.html">Home</a>
+      <data-ng-view></data-ng-view>
       	<button ng-click="yeniBilgi()" class="btn btn-default">Yeni Bilgi Ekle</button>
     </div>
     <div ng-view></div>
     <div class="container">
       <div ng-repeat="b in bilgi" class="rep1">
-        <bilgi info="b"></bilgi>
+        <bilgi info="b">
+          <bilgi-duzenle info="b"></bilgi-duzenle>
+        </bilgi>
       </div><!--ng repeat-->
     </div><!--container-->
   </div><!--div main-->

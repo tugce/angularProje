@@ -5,9 +5,9 @@ app.controller('MainController', ['$scope', function($scope, $route, $routeParam
   $scope.$routeParams = $routeParams;
 	$scope.bilgi = [
 	    {
-	        isim: '',
+	        isim: 'test',
 		      no: 1,
-	        icerik: ""
+	        icerik: "test test"
 	    }
 	];
 	$scope.yeniBilgiNo = "->";
