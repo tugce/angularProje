@@ -10,15 +10,15 @@ app.controller('MainController', ['$scope', function($scope, $route, $routeParam
 	        icerik: "test test"
 	    }
 	];
-	$scope.yeniBilgiNo = "->";
+	$scope.yeniBilgiNo = 1;
 	$scope.yeniBilgiAd = "";
 	$scope.icerik = "";
 	$scope.yeniBilgiEkle = function(){
-			var yeniBilgi = [{isim: $scope.yeniBilgiAd, no: $scope.bilgi.length + 1, icerik: icerik}];
+			var yeniBilgi = [{isim: $scope.yeniBilgiAd, no: $scope.bilgi.length + 1, icerik: $scope.icerik}];
 			var currentList = $scope.bilgi;
 			var newList = currentList.concat(yeniBilgi);
 			$scope.bilgi = newList;
-			yeniBilgiNo = yeniBilgiNo + 1;
+			$scope.yeniBilgiNo = $scope.yeniBilgiNo + 1;
 	};
 
 }]);
