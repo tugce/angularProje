@@ -20,5 +20,8 @@ app.controller('MainController', ['$scope', function($scope, $route, $routeParam
 			$scope.bilgi = newList;
 			yeniBilgiNo = yeniBilgiNo + 1;
 	};
+	$scope.go = function ( hash ) {
+  $location.path( hash );
+};
 
 }]);

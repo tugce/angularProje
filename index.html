@@ -15,11 +15,22 @@
     </div><!--jumbotron-->
     <br>
     <div class="container">
-      <a href="index.html">Home</a>
-      <data-ng-view></data-ng-view>
-      	<button ng-click="yeniBilgi()" class="btn btn-default">Yeni Bilgi Ekle</button>
+      <div class="row">
+          <div class="col-sm-4">
+            <div class="input-group">
+              <span class="input-group-addon" id="sizing-addon2"></span>
+              <input type="text" class="form-control" placeholder="Başlık" aria-describedby="sizing-addon2">
+              </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+               <textarea class="form-control" rows="5" id="comment" placeholder="İçerik"></textarea>
+            </div>
+      </div>
+      <button ng-click='go("/add-bilgi.html")' class="btn btn-default">Yeni Bilgi Ekle</button>
+      <div ng-view></div>
     </div>
-    <div ng-view></div>
+
     <div class="container">
       <div ng-repeat="b in bilgi" class="rep1">
         <bilgi info="b">
